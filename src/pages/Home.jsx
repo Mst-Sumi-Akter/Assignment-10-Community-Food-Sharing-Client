@@ -1,7 +1,23 @@
+import React, { useEffect, useState } from "react";
+import FoodCard from "../components/FoodCard";
+
 const Home = () => {
+  const [foods, setFoods] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/foods") // replace with your backend
+      .then((res) => res.json())
+      .then((data) => setFoods(data.slice(0, 6))); // featured 6 foods
+  }, []);
+
   return (
-    <div className="text-center mt-10">
-      <h1 className="text-3xl font-bold text-green-600">✅ Home Page is Working!</h1>
+    <div>
+      <h1>Welcome to PlateShare</h1>
+      <div className="food-grid">
+        {foods.map((food) => (
+          <FoodCard key={food._id} food={food} />
+        ))}
+      </div>
     </div>
   );
 };
