@@ -1,88 +1,56 @@
-
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa";
 import { useAuth } from "../context/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
+import toast from "react-hot-toast";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Login = () => {
   const { login, loginWithGoogle } = useAuth();
-  const location = useLocation();
   const navigate = useNavigate();
-
+  const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
-  const handleLogIn = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    const { email, password } = e.target;
 
-    login(email, password)
-      .then((result) => {
-        console.log(result.user);
-        event.target.reset();
-        navigate(from, { replace: true });
-      })
-      .catch((error) => console.error(error));
+    toast.loading("Logging in...", { id: "login" });
+
+    try {
+      await login(email.value, password.value);
+      toast.success("Logged in successfully!", { id: "login" });
+      navigate(from, { replace: true });
+      e.target.reset();
+    } catch (error) {
+      toast.error(error.message || "Login failed", { id: "login" });
+      console.error(error);
+    }
   };
 
-  const handleGoogleSignIn = () => {
-    loginWithGoogle()
-      .then((result) => {
-        console.log(result.user);
-        navigate(from, { replace: true });
-      })
-      .catch((error) => console.error(error));
+  const handleGoogle = async () => {
+    toast.loading("Signing in with Google...", { id: "google" });
+    try {
+      await loginWithGoogle();
+      toast.success("Logged in successfully!", { id: "google" });
+      navigate(from, { replace: true });
+    } catch (error) {
+      toast.error(error.message || "Google sign-in failed", { id: "google" });
+      console.error(error);
+    }
   };
 
   return (
     <div className="min-h-screen flex flex-col">
-   
-
-      {/* Main Login Form */}
+      <Navbar />
       <div className="flex-grow flex items-center justify-center bg-gray-50 p-10">
         <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
-          <h1 className="text-3xl font-bold text-center mb-6 text-gray-800">Login</h1>
-
-          <form onSubmit={handleLogIn} className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Email</label>
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                className="mt-1 w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700">Password</label>
-              <input
-                type="password"
-                name="password"
-                placeholder="Enter your password"
-                className="mt-1 w-full rounded-full border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                required
-              />
-            </div>
-
-            <div className="text-right">
-              <Link to="/auth/forgot-password" className="text-sm text-blue-500 hover:underline">
-                Forgot password?
-              </Link>
-            </div>
-
-            <button
-              type="submit"
-              className="btn w-full rounded-full text-white text-sm font-semibold 
-              bg-gradient-to-r from-[#ff8a0c] via-[#ff9e2b] to-[#07a0e3]
-              hover:from-[#07a0e3] hover:via-[#2ec8f9] hover:to-[#ff8a0c]
-              border-none shadow-md hover:shadow-xl transition-all duration-300"
-            >
-              Login
-            </button>
+          <h1 className="text-3xl font-bold text-center mb-6">Login</h1>
+          <form onSubmit={handleLogin} className="space-y-4">
+            <input type="email" name="email" placeholder="Email" className="input input-bordered w-full rounded-full" required />
+            <input type="password" name="password" placeholder="Password" className="input input-bordered w-full rounded-full" required />
+            <button type="submit" className="w-full bg-gradient-to-r from-[#ff8a0c] via-[#ff9e2b] to-[#07a0e3] text-white py-2 rounded-full font-semibold">Login</button>
           </form>
 
           <div className="my-4 flex items-center justify-center">
@@ -91,24 +59,16 @@ const Login = () => {
             <span className="border-t border-gray-300 flex-grow ml-2"></span>
           </div>
 
-          <button
-            onClick={handleGoogleSignIn}
-            className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-full py-2 hover:bg-gray-100 transition-all"
-          >
-            <FaGoogle className="text-red-500" />
-            Login with Google
+          <button onClick={handleGoogle} className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-full py-2 hover:bg-gray-100 transition-all">
+            <FaGoogle className="text-red-500" /> Login with Google
           </button>
 
-          <p className="text-center text-sm text-gray-600 mt-6">
-            New to our platform?{" "}
-            <Link to="/auth/register" className="text-blue-500 hover:underline font-medium">
-              Register
-            </Link>
+          <p className="text-center text-sm mt-6">
+            New to our platform? <Link to="/auth/register" className="text-blue-500 hover:underline">Register</Link>
           </p>
         </div>
       </div>
-
-     
+      <Footer />
     </div>
   );
 };

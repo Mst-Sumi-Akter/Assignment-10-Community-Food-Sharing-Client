@@ -6,10 +6,10 @@ import { ImBoxAdd } from "react-icons/im";
 import { FaUser, FaGear } from "react-icons/fa6";
 import { LuHeartHandshake } from "react-icons/lu";
 import { useAuth } from "../context/AuthProvider";
-import logo from "../assets/1logo.png"
+import logo from "../assets/1logo.png";
 
 const Navbar = () => {
-  const { user, logout } = useAuth();
+  const { user, logout } = useAuth(); 
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
@@ -17,7 +17,7 @@ const Navbar = () => {
     const html = document.querySelector("html");
     html.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
-  }, [theme])
+  }, [theme]);
 
   const handleTheme = (checked) => {
     setTheme(checked ? "dark" : "light");
@@ -25,7 +25,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await logout();
+      await logout(); 
       alert("Logged out successfully!");
     } catch (error) {
       console.error(error);
@@ -92,7 +92,7 @@ const Navbar = () => {
           className="flex items-center gap-1 text-xl font-bold tracking-wide"
         >
           <img src={logo} className="h-20 w-auto" alt="PlateShare Logo" />
-            PlateShare
+          PlateShare
         </Link>
       </div>
 
@@ -199,16 +199,16 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             <Link
               to="/login"
-               className="btn rounded-full border-none btn-sm text-white font-semibold 
+              className="btn rounded-full border-none btn-sm text-white font-semibold 
              bg-[linear-gradient(135deg,_#ff8a0c_0%,_#ffb347_35%,_#07a0e3_100%)]
              hover:bg-[linear-gradient(135deg,_#07a0e3_0%,_#45c4ff_40%,_#ff8a0c_100%)]
              shadow-md hover:shadow-lg transition-all duration-300"
-             >
+            >
               <IoLogIn /> Login
             </Link>
             <Link
               to="/register"
-              className="btn rounded-full border-gray-300  btn-sm bg-linear-to-r from-pink-500 to-red-500 text-white"
+              className="btn rounded-full border-gray-300 btn-sm bg-linear-to-r from-pink-500 to-red-500 text-white"
             >
               Register
             </Link>
