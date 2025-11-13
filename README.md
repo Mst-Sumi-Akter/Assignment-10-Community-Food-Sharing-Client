@@ -73,3 +73,8 @@ This project focuses on **community engagement**, **real-time food availability*
 
 
 
+##  Environment Variables (.env)
+
+Create a `.env` file in both client and server:
+
+###  Server (.env)
