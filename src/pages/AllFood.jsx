@@ -7,7 +7,7 @@ const AllFood = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3000/foods')
+    fetch('https://community-food-sharing-server-iota.vercel.app/foods')
       .then(res => res.json())
       .then(data => {
         const availableFoods = data;

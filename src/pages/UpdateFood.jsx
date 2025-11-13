@@ -9,7 +9,7 @@ const UpdateFood = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/foods/${id}`)
+    fetch(`https://community-food-sharing-server-iota.vercel.app/foods/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setFood(data);
@@ -31,7 +31,7 @@ const UpdateFood = () => {
     };
 
     try {
-      const res = await fetch(`http://localhost:3000/foods/${id}`, {
+      const res = await fetch(`https://community-food-sharing-server-iota.vercel.app/foods/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFood),

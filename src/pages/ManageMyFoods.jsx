@@ -11,7 +11,7 @@ const ManageMyFoods = () => {
   useEffect(() => {
     if (!user) return;
 
-    fetch(`http://localhost:3000/my-foods?email=${user.email}`)
+    fetch(`https://community-food-sharing-server-iota.vercel.app/my-foods?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setFoods(data);
@@ -24,7 +24,7 @@ const ManageMyFoods = () => {
     const confirm = window.confirm("Are you sure you want to delete this food?");
     if (!confirm) return;
 
-    const res = await fetch(`http://localhost:3000/foods/${id}`, {
+    const res = await fetch(`https://community-food-sharing-server-iota.vercel.app/foods/${id}`, {
       method: "DELETE",
     });
     const data = await res.json();

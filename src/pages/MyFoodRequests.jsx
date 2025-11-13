@@ -13,7 +13,7 @@ const MyFoodRequests = () => {
 
     const fetchRequests = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/food-requests?email=${user.email}`);
+        const res = await fetch(`https://community-food-sharing-server-iota.vercel.app/food-requests?email=${user.email}`);
         if (!res.ok) throw new Error("Failed to load your food requests");
         const data = await res.json();
         setRequests(data);

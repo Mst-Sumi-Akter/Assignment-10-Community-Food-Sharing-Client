@@ -68,7 +68,7 @@ const AddFood = () => {
 
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:3000/add-food", {
+      const res = await fetch("https://community-food-sharing-server-iota.vercel.app/add-food", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

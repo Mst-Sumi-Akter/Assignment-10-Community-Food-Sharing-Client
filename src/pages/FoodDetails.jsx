@@ -12,7 +12,7 @@ const FoodDetails = () => {
   useEffect(() => {
     const fetchFood = async () => {
       try {
-        const res = await fetch(`http://localhost:3000/foods/${id}`);
+        const res = await fetch(`https://community-food-sharing-server-iota.vercel.app/foods/${id}`);
         if (!res.ok) throw new Error("Failed to fetch food details");
         const data = await res.json();
         setFood(data);
@@ -31,7 +31,7 @@ const FoodDetails = () => {
     if (!user) return alert("Please login to request food");
 
     try {
-      const res = await fetch(`http://localhost:3000/foods/${id}/request`, {
+      const res = await fetch(`https://community-food-sharing-server-iota.vercel.app/foods/${id}/request`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: user.email }),

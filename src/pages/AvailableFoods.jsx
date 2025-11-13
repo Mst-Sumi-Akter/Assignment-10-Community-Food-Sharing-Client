@@ -10,7 +10,7 @@ const AvailableFoods = () => {
   useEffect(() => {
     const fetchFoods = async () => {
       try {
-        const res = await fetch("http://localhost:3000/foods/status/Available");
+        const res = await fetch("https://community-food-sharing-server-iota.vercel.app/foods/status/Available");
         if (!res.ok) throw new Error("Failed to fetch available foods");
         const data = await res.json();
         setFoods(data);

@@ -10,7 +10,7 @@ const Error404 = () => {
       <img
         src="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif" 
         alt="404 Not Found"
-        className="w-64 h-64 mb-6"
+        className="w-90 h-90 mb-6"
       />
       <h1 className="text-4xl font-bold mb-2">404 - Page Not Found</h1>
       <p className="text-gray-600 mb-4">
