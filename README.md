@@ -15,7 +15,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 ---
 
-## 🌟 Features
+##  Features
 
 -  **Firebase Authentication**
   - Email/Password and Google login system.
@@ -61,7 +61,7 @@ This project focuses on **community engagement**, **real-time food availability*
 ##  Tech Stack
 
 | Technology | Purpose |
-|-------------|----------|
+|----------------|-------------------|
 | **React.js** | Frontend framework |
 | **Tailwind CSS** | Styling and responsiveness |
 | **Firebase Auth** | User authentication |
@@ -72,8 +72,4 @@ This project focuses on **community engagement**, **real-time food availability*
 
 
 
-##  Environment Variables (.env)
 
-Create a `.env` file in both client and server:
-
-###  Server (.env)
