@@ -6,7 +6,7 @@ https://community-food-sharing-server-iota.vercel.app/
 
 ---
 
-## 📖 Project Overview
+#  Project Overview
 
 **PlateShare** is a full-stack MERN (MongoDB, Express, React, Node) web application that connects communities through food sharing.  
 Users can share surplus food to reduce waste, and others can browse and request these items easily.
@@ -15,7 +15,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 ---
 
-##  Features
+#  Features
 
 -  **Firebase Authentication**
   - Email/Password and Google login system.
@@ -41,15 +41,15 @@ This project focuses on **community engagement**, **real-time food availability*
 
 ---
 
-##  Pages & Routes
+#  Pages & Routes
 
-###  Public Routes
+##  Public Routes
 - `/` → **Home** (Banner, Featured Foods, How It Works, Mission)
 - `/available-foods` → All available foods
 - `/login` → User login page
 - `/register` → New user registration
 
-###  Private Routes
+##  Private Routes
 - `/add-food` → Add new food
 - `/manage-foods` → Manage user’s own added foods
 - `/update-food/:id` → Update food details
@@ -58,7 +58,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 ---
 
-##  Tech Stack
+#  Tech Stack
 
 | Technology | Purpose |
 |----------------|-------------------|
@@ -73,8 +73,8 @@ This project focuses on **community engagement**, **real-time food availability*
 
 
 
-##  Environment Variables (.env)
+#  Environment Variables (.env)
 
 Create a `.env` file in both client and server:
 
-###  Server (.env)
+##  Server (.env)
