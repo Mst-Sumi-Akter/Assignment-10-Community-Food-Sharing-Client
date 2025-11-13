@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthProvider";
+import Spinner from "../components/Spinner";
 
 const MyFoodRequests = () => {
   const { user } = useAuth();
@@ -27,7 +28,8 @@ const MyFoodRequests = () => {
     fetchRequests();
   }, [user]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Spinner />;
+
   if (error) return <p>{error}</p>;
   if (requests.length === 0) return <p>No food requests yet.</p>;
 

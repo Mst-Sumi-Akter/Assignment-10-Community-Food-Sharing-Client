@@ -12,6 +12,7 @@ import Register from "../Auth/Register";
 import PrivateRoute from "./PrivateRoute";
 import AllFood from "../pages/AllFood";
 import ManageMyFoods from "../pages/ManageMyFoods";
+import Error404 from "../components/Error404";
 
 const router = createBrowserRouter([
   {
@@ -61,12 +62,30 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      { 
+        path: "*", 
+        element: <Error404 /> 
+      },
     ],
   },
-  { path: "/login", element: <Login /> },
-  { path: "auth/login", element: <Login /> },
-  { path: "/register", element: <Register /> },
-  { path: "auth/register", element: <Register /> },
+  { 
+    path: "/login", 
+    element: <Login /> 
+  },
+  { 
+    path: "auth/login", 
+    element: <Login /> 
+  },
+  { 
+    path: "/register", 
+    element: <Register /> 
+  },
+  { 
+    path: "auth/register", 
+    element: <Register /> 
+  },
+  { path: "*", element: <Error404 /> },
 ]);
+
 
 export default router;

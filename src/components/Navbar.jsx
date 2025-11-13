@@ -100,7 +100,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={handleLogout}
-                      className="w-full text-left px-4 py-2 text-red-600 hover:bg-red-100 font-semibold flex items-center gap-2"
+                      className="w-full text-left px-4 py-2  text-red-600 hover:bg-red-100 font-semibold flex items-center gap-2"
                     >
                       <IoLogOut /> Logout
                     </button>
@@ -112,7 +112,7 @@ const Navbar = () => {
             <>
               <Link
                 to="/login"
-                className="px-4 py-2 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded font-semibold flex items-center gap-2"
+                className="px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded font-semibold flex items-center gap-2"
               >
                 <IoLogIn /> Login
               </Link>

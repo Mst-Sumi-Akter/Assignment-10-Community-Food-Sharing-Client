@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthProvider";
+ import Spinner from "../components/Spinner";
 
 const ManageMyFoods = () => {
   const { user } = useAuth();
@@ -38,7 +39,7 @@ const ManageMyFoods = () => {
     window.location.href = `/update-food/${id}`;
   };
 
-  if (loading) return <p>Loading...</p>;
+if (loading) return <Spinner />;
 
   return (
     <div className="p-6">

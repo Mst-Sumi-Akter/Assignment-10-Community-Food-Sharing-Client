@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FoodCard from '../components/FoodCard';
+import Spinner from '../components/Spinner';
 
 const AllFood = () => {
   const [foods, setFoods] = useState([]);
@@ -18,8 +19,7 @@ const AllFood = () => {
         setLoading(false);
       });
   }, []);
-
-  if (loading) return <p className="text-center mt-10">Loading...</p>;
+ if (loading) return <Spinner/>;
 
   if (foods.length === 0)
     return <p className="text-center mt-10">No available foods found.</p>;

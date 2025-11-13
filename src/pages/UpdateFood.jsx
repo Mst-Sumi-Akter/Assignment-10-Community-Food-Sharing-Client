@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Spinner from "../components/Spinner";
 
 const UpdateFood = () => {
   const { id } = useParams();
@@ -49,7 +50,7 @@ const UpdateFood = () => {
     }
   };
 
-  if (loading) return <p>Loading...</p>;
+ if (loading) return <Spinner />;
   if (!food) return <p>Food not found</p>;
 
   return (
