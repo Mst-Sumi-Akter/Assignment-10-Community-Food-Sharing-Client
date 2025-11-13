@@ -10,6 +10,7 @@ import MyFoodRequests from "../pages/MyFoodRequests";
 import Login from "../Auth/Login";
 import Register from "../Auth/Register";
 import PrivateRoute from "./PrivateRoute";
+import AllFood from "../pages/AllFood";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       { path: "/", element: <Home /> },
+      {path:"/all-foods", element:<AllFood></AllFood>},
       { path: "/available-foods", element: <AvailableFoods /> },
       {
         path: "/add-food",
