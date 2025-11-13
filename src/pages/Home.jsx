@@ -7,10 +7,9 @@ const Home = () => {
   const [foods, setFoods] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/foods") // replace with your backend
+    fetch("http://localhost:3000/foods")
       .then((res) => res.json())
       .then((data) => {
-        // sort by quantity descending
         const sorted = data.sort((a, b) => b.quantity - a.quantity);
         setFoods(sorted.slice(0, 6));
       })
@@ -19,6 +18,11 @@ const Home = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+      {/*  Banner Section */}
+      <section className="mb-12">
+        <Banner />
+      </section>
+
       {/* Featured Foods Section */}
       <section className="py-12">
         <h2 className="text-2xl font-semibold mb-8 text-center text-gray-800">
