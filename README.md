@@ -58,17 +58,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 ---
 
-##  Tech Stack
 
-| Technology | Purpose |
-|----------------|-------------------|
-| **React.js** | Frontend framework |
-| **Tailwind CSS** | Styling and responsiveness |
-| **Firebase Auth** | User authentication |
-| **Express.js** | Server-side framework |
-| **MongoDB Atlas** | Database |
-| **Vercel** | Backend hosting |
-| **Netlify / Surge / Firebase Hosting** | Frontend hosting |
 
 
 
