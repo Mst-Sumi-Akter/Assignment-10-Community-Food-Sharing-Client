@@ -49,11 +49,11 @@ This project focuses on **community engagement**, **real-time food availability*
 - `/register` → New user registration
 
 ##  Private Routes
-- `/add-food` → Add new food
-- `/manage-foods` → Manage user’s own added foods
-- `/update-food/:id` → Update food details
-- `/my-requests` → View requested foods
-- `/food/:id` → Food details and Request button
+- `/add-food` → Add new food.
+- `/manage-foods` → Manage user’s own added foods.
+- `/update-food/:id` → Update food details.
+- `/my-requests` → View requested foods.
+- `/food/:id` → Food details and Request button.
 
 ---
 
