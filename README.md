@@ -16,7 +16,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 #  Features
 
--  **Firebase Authentication**
+-  ***Firebase Authentication***
   - Email/Password and Google login system.
   - Password validation and success/error toasts.
 
