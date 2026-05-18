@@ -18,7 +18,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 -  ***Firebase Authentication***
   - Email/Password and Google login system.
-  - Password validation and success/error toasts.
+  - Password validation and success or error toasts.
 
 -  **Dynamic Food Management (CRUD)**
   - Add, Update, Delete, and View foods in real-time.
