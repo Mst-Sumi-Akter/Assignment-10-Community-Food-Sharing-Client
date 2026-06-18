@@ -69,7 +69,7 @@ This project focuses on **community engagement**, **real-time food availability*
 | **Vercel** | Backend hosting |
 | **Netlify / Surge / Firebase Hosting** | Frontend hosting |
 
-
+----
 
 
 #  Environment Variables (.env)
