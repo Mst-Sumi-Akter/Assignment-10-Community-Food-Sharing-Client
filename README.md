@@ -5,7 +5,7 @@
 
 ------
 
-#  Project Overview :
+#  Project Overview 
 
 **PlateShare** is a full-stack MERN (MongoDB, Express, React, Node) web application that connects communities through food sharing.  
 Users can share surplus food to reduce waste, and others can browse and request these items easily.
