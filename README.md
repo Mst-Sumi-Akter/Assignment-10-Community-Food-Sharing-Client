@@ -1,4 +1,4 @@
-#  Project Name - Community Food Sharing Platform
+# Project Name - Community Food Sharing Platform
 
 ###  Live Site: https://shiny-capybara-90abf6.netlify.app/  
 ###  Server (API): https://community-food-sharing-server-iota.vercel.app/
@@ -43,12 +43,14 @@ This project focuses on **community engagement**, **real-time food availability*
 #  Pages & Routes
 
 ##  Public Routes
+
 - `/` → **Home** (Banner, Featured Foods, How It Works, Mission)
 - `/available-foods` → All available foods
 - `/login` → User login page
 - `/register` → New user registration
 
 ##  Private Routes
+
 - `/add-food` → Add new food.
 - `/manage-foods` → Manage user’s own added foods.
 - `/update-food/:id` → Update food details.
