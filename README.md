@@ -25,10 +25,10 @@ This project focuses on **community engagement**, **real-time food availability*
   - Uses MongoDB for storing all food and user data.
 
 -  **Private Routes for Authenticated Users**
-  - Secure access to Add Food, Manage My Foods, and My Requests pages.
+  - Secure access to Add Food, Manage My Foods, and My       Requests pages.
 
 -  **Food Request System**
-  - Request available foods directly from the “Food Details” page.
+  - Request available foods directly from the “Food          Details” page.
 
 -  **Dynamic & Responsive UI**
   - Built with Tailwind CSS and React Router.
@@ -40,7 +40,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 ---
 
-#  Pages & Routes
+# Pages & Routes
 
 ##  Public Routes
 
