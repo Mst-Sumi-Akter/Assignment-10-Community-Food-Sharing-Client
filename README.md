@@ -36,7 +36,7 @@ This project focuses on **community engagement**, **real-time food availability*
 
 -  **Loading & Error Handling**
   - Spinner while fetching data.
-  - Custom 404 Error Page with animation and Back to Home button.
+  - Custom 404 Error Page with animation and Back to         Home button.
 
 ---
 
@@ -69,7 +69,7 @@ This project focuses on **community engagement**, **real-time food availability*
 | **Express.js** | Server-side framework |
 | **MongoDB Atlas** | Database |
 | **Vercel** | Backend hosting |
-| **Netlify / Surge / Firebase Hosting** | Frontend hosting |
+| **Netlify / Surge / Firebase Hosting** | Frontend        hosting |
 
 ----
 
