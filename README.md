@@ -1,4 +1,4 @@
-# Project Name - Community Food Sharing Platform 
+# Project Name - Community Food Sharing Platform 🍜 
 
 ###  Live Site: https://shiny-capybara-90abf6.netlify.app/  
 ###  Server (API): https://community-food-sharing-server-iota.vercel.app/
